@@ -1,14 +1,29 @@
 
-
+to install
+```
 npm install @ionic/app-scripts@latest --save-dev
 npm install
+```
 
 you can see it runs and loads forms from form.io service
+```
 npm run ionic:serve
+```
 
+it also builds in dev mode:
+```
+npm run ionic:build
+```
+
+However there are errors with prod (ostensibly with aot)
+```
 npm run ionic:build --prod
+```
+
+
 
 will result in the error:
+```
 Error: Error encountered resolving symbol values statically. Calling function 'ɵmakeDecorator', function 
 
             calls are not supported. Consider replacing the function or lambda with a reference to an exported function, 
@@ -49,3 +64,6 @@ node_modules/ng2-formio/node_modules/@angular/core/core.d.ts, resolving symbol F
     at _createNgModules (node_modules/@angular/compiler/bundles/compiler.umd.js:22536:26)
 
 
+```
+
+And potentially other errors
