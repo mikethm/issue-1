@@ -6,7 +6,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { FormioModule } from 'ng2-formio';
+import { FormioModule, FormioAppConfig } from 'ng2-formio';
+import { AppConfig } from '../config.js';
+export { FormioAppConfig } from 'ng2-formio/dist/formio.config';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { FormioModule } from 'ng2-formio';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: FormioAppConfig, useValue: AppConfig}
   ]
 })
 export class AppModule {}
