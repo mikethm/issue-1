@@ -8,7 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FormioModule, FormioAppConfig } from 'ng2-formio';
 import { AppConfig } from '../config.js';
-export { FormioAppConfig } from 'ng2-formio/dist/formio.config';
+export { FormioAppConfig } from 'ng2-formio/src/formio.config';
 
 
 @NgModule({
